@@ -5,103 +5,208 @@
     box-sizing: border-box;
 }
 
+/* Base */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f7;
-    color: #222;
+    background: #0b0c10;
+    color: #e5e5e5;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Nav Bar */
+a {
+    color: inherit;
+}
+
+/* Header & Nav */
 header {
-    background: #111;
+    background: #050608;
     color: white;
-    padding-bottom: 40px;
 }
 
 .navbar {
     max-width: 1100px;
-    margin: auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
-    color: #ddd;
+    color: #bbb;
     text-decoration: none;
-    transition: 0.2s;
+    font-size: 0.95rem;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
 }
 
 .nav-links a:hover {
-    color: white;
+    background: #1f2833;
+    color: #fff;
 }
 
-/* Hero Section */
+.nav-links a.active {
+    background: #45a29e;
+    color: #050608;
+}
+
+/* Hero */
 .hero {
     max-width: 1100px;
-    margin: 60px auto;
-    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px 30px 20px;
+    text-align: left;
+}
+
+.hero.full-height {
+    min-height: calc(100vh - 140px); /* roughly fit window including header & footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
+/* Button */
 .btn {
-    background: #ff4f4f;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
+    display: inline-block;
+    background: #45a29e;
+    color: #050608;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    font-size: 1rem;
-    transition: 0.2s;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s;
 }
 
 .btn:hover {
-    background: #e03c3c;
+    background: #66fcf1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* Content section */
+/* Main content */
+main {
+    flex: 1;
+}
+
 .content-section {
-    max-width: 900px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    max-width: 1100px;
+    margin: 20px auto 40px auto;
+    background: #1f2833;
+    padding: 24px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.45);
 }
 
 .content-section h3 {
     margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.content-section p {
+    margin-bottom: 10px;
+}
+
+/* News grid - home page */
+.news-grid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+.news-item {
+    background: #141b24;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.news-item h4 {
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.project-card {
+    background: #141b24;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-bottom: 6px;
+}
+
+.project-meta {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #c5c6c7;
+}
+
+/* Small helper */
+.small-text {
+    font-size: 0.85rem;
+    color: #c5c6c7;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #ccc;
-    margin-top: 40px;
+    padding: 16px 10px;
+    background: #050608;
+    color: #c5c6c7;
+    font-size: 0.85rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .hero {
+        text-align: left;
+        padding-top: 24px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
 }
