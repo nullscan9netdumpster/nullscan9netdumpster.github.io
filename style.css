@@ -178,6 +178,26 @@ main {
     color: #c5c6c7;
 }
 
+/* Posts list */
+.posts-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.posts-list li {
+    margin-bottom: 8px;
+}
+
+.posts-list a {
+    text-decoration: none;
+    color: #66fcf1;
+    font-size: 0.95rem;
+}
+
+.posts-list a:hover {
+    text-decoration: underline;
+}
+
 /* Small helper */
 .small-text {
     font-size: 0.85rem;

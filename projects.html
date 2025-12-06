@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>backdoor-echo — Projects</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
@@ -12,10 +12,11 @@
         <nav class="navbar">
             <h1 class="logo">backdoor-echo</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects.html" class="active">Projects</a></li>
+                <li><a href="/posts/">Posts</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -25,38 +26,63 @@
         </section>
     </header>
 
-    <main>
-        <section class="content-section">
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Project One</h3>
-                    <p>
-                        A placeholder project description. Replace this with something real:
-                        a tool, script, or write-up you want to share.
-                    </p>
-                    <p class="project-meta">Status: Draft · Tech: HTML / CSS / JS</p>
-                </article>
+<main>
+    <section class="content-section">
+        <div class="projects-grid">
 
-                <article class="project-card">
-                    <h3>Project Two</h3>
-                    <p>
-                        Another example entry. You can link to GitHub repos, blog posts,
-                        or external resources from here.
-                    </p>
-                    <p class="project-meta">Status: Idea · Tech: TBD</p>
-                </article>
+            <article class="project-card">
+                <h3>Threat Intelligence Aggregator</h3>
+                <p>
+                    A lightweight platform that pulls threat-intel feeds (MITRE, AlienVault OTX,
+                    AbuseIPDB) and normalizes indicators into a unified dashboard. Includes
+                    automated enrichment, tagging, and export to SIEM/SOAR.
+                </p>
+                <p class="project-meta">Status: Active · Tech: Python / FastAPI / Redis</p>
+            </article>
 
-                <article class="project-card">
-                    <h3>Project Three</h3>
-                    <p>
-                        Use this slot for security experiments, automation scripts, or anything
-                        else you’re working on.
-                    </p>
-                    <p class="project-meta">Status: WIP · Tech: Mixed</p>
-                </article>
-            </div>
-        </section>
-    </main>
+            <article class="project-card">
+                <h3>Network Attack Surface Mapper</h3>
+                <p>
+                    A tool that scans internal/external networks, correlates open services with
+                    known CVEs, and produces prioritized remediation reports. Designed for lab
+                    environments and security assessments.
+                </p>
+                <p class="project-meta">Status: Beta · Tech: Rust / Nmap API / CVE DB</p>
+            </article>
+
+            <article class="project-card">
+                <h3>ML-Based Phishing Email Classifier</h3>
+                <p>
+                    A machine-learning pipeline that detects phishing patterns using NLP
+                    (transformers), URL analysis, and sender-reputation scoring. Includes a
+                    real-time demo interface and evaluation metrics.
+                </p>
+                <p class="project-meta">Status: Research · Tech: Python / Scikit-learn / HuggingFace</p>
+            </article>
+
+            <article class="project-card">
+                <h3>Secure File Integrity Monitor</h3>
+                <p>
+                    A cross-platform agent that hashes critical system files, monitors for unauthorized
+                    modifications, and alerts via webhook or syslog. Designed for small-scale SOC labs.
+                </p>
+                <p class="project-meta">Status: Stable · Tech: Go / SQLite / SHA-256</p>
+            </article>
+
+            <article class="project-card">
+                <h3>Automated Web App Pentest Toolkit</h3>
+                <p>
+                    A modular toolkit combining passive recon, subdomain enumeration, endpoint
+                    discovery, and automated fuzzing. Useful for training or streamlining early
+                    pentesting phases.
+                </p>
+                <p class="project-meta">Status: WIP · Tech: Python / Burp API / Bash</p>
+            </article>
+
+        </div>
+    </section>
+</main>
+
 
     <footer>
         <p>© 2025 backdoor-echo — All rights reserved.</p>
